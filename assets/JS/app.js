@@ -18,14 +18,18 @@ let h1UserName = document.querySelector("#h1UserName");
 let btnLogin = document.querySelector("#loginBtn");
 let btnRegistro = document.querySelector("#registroBtn")
 
+const btnClick = (btnOn, btnOff) => {
+  btnOn.classList.add("btnOnClick");
+  btnOff.classList.remove("btnOnClick");
+
+}
+
 btnLogin.addEventListener("click", () => {
-  btnLogin.classList.add("btnOnClick");
-  btnRegistro.classList.remove("btnOnClick");
+  btnClick(btnLogin,btnRegistro);
 })
 
 btnRegistro.addEventListener("click", () => {
-  btnRegistro.classList.add("btnOnClick");
-  btnLogin.classList.remove("btnOnClick");
+  btnClick(btnRegistro,btnLogin);
 })
 
 btnSignIn.addEventListener('click', async () => {
