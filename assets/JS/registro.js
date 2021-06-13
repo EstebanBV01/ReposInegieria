@@ -27,11 +27,11 @@ const registerUser = (email, password) => {
 
 const registerUserGoogle = () => {
     console.log('Enter');
-    
-    let provider = new firebase.auth.GoogleAuthProvider();
 
+    let provider = new firebase.auth.GoogleAuthProvider();
+    let user = null;
     firebase.auth()
-        .signInWithRedirect(provider)
+        .signInWithPopup(provider)
         .then((result) => {
             /** @type {firebase.auth.OAuthCredential} */
             var credential = result.credential;
@@ -39,7 +39,11 @@ const registerUserGoogle = () => {
             // This gives you a Google Access Token. You can use it to access the Google API.
             var token = credential.accessToken;
             // The signed-in user info.
-            var user = result.user;
+            user = result.user;
+            console.log('Data obtained');
+            
+            console.log({user});
+            
             // ...
         }).catch((error) => {
             // Handle Errors here.
@@ -51,6 +55,7 @@ const registerUserGoogle = () => {
             var credential = error.credential;
             // ...
             console.log(errorMessage);
-            
+
         });
+    return user;
 }

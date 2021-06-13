@@ -16,13 +16,15 @@ let db = firebase.firestore();
 let btnSignIn = document.querySelector("#btnSignIn");
 let h1UserName = document.querySelector("#h1UserName");
 
-btnSignIn.addEventListener("click", () => {
+btnSignIn.addEventListener("click", async()  => {
   console.log('click');
   
-  let user =loginUser();
+  let user =await registerUserGoogle();
+  console.log('finish');
+  
   console.log({user});
   
-  h1UserName.innerHTML = user.name;
+
 })
 
 
