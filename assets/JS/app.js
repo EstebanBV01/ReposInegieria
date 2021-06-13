@@ -15,7 +15,18 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 let btnSignIn = document.querySelector("#btnSignIn");
 let h1UserName = document.querySelector("#h1UserName");
+let btnLogin = document.querySelector("#loginBtn");
+let btnRegistro = document.querySelector("#registroBtn")
 
+btnLogin.addEventListener("click", () => {
+  btnLogin.classList.add("btnOnClick");
+  btnRegistro.classList.remove("btnOnClick");
+})
+
+btnRegistro.addEventListener("click", () => {
+  btnRegistro.classList.add("btnOnClick");
+  btnLogin.classList.remove("btnOnClick");
+})
 
 btnSignIn.addEventListener('click', async () => {
   let user = await registerUserGoogle();

@@ -1,34 +1,38 @@
-html, body{
-    margin : 0px;
-    background-color:#dce0e6;
+#loginBtn,#registroBtn{
+    margin-bottom: 25px;
+    background-color: white;
     color: black;
+    border-width: 0px;
    
 }
-.titulo{
-    text-align: center;
-    background-color: black;
+
+#btnGoogle{
+    border-color: #DB4437;
+    background-color : white;
+    color: #DB4437;
+    background-image: url(/assets/images/google.svg);
+    padding: 10px 10px;
+	border-right: 1px solid rgba(255, 255, 255, 0.16);
+	box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
+}
+
+#btnGoogle:hover{
+    background-color : #DB4437;
     color: white;
-    padding: 25px;
-    font-size: 20;
-}
-
-.carta{
-    position: relative;
-    width: 150px;
-    left: 100px;
-    margin-left: -100px;
-}
-
-#computadora-cartas, #jugador-cartas{
-    height : 230px;
 
 }
 
-.btn-close{
-    border-width: 0px;
-    background-color: white;
+#labelPassword,#labelEmail{
+    margin-left: 10px;
 }
 
-ul{
-    -ms-flex-align: end;
+#inputPassword,#inputEmail{
+    margin-left: 10px;
+}
+
+.btnOnClick{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-underline-position: under;
+    text-decoration-color: teal;
 }
