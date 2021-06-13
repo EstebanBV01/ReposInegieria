@@ -14,11 +14,15 @@ firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
 let btnSignIn = document.querySelector("#btnSignIn");
+let h1UserName = document.querySelector("#h1UserName");
 
 btnSignIn.addEventListener("click", () => {
   console.log('click');
   
-  registerUserGoogle();
+  let user =loginUser();
+  console.log({user});
+  
+  h1UserName.innerHTML = user.name;
 })
 
 

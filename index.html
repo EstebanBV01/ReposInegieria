@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/references/bootstrap.min.css">
 
-    
-    <title>AquaMetrics</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/references/bootstrap.min.css">
+
+
+  <title>AquaMetrics</title>
 </head>
+
 <body>
-    <!-- barra de navegacion -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">AquaMetrics</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a id="btnSignIn" class="nav-link" href="#">SignIn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" 
-                data-bs-toggle="modal" data-bs-target="#signUpModal">SignUp</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- modal es la ventana emergente para logerarse -->
-      <!-- Button trigger modal -->
+  <!-- barra de navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AquaMetrics</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="btnSignIn" class="nav-link" href="#">SignIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signUpModal">SignUp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- modal es la ventana emergente para logerarse -->
+  <!-- Button trigger modal -->
   <!-- Modal -->
   <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -48,9 +50,9 @@
         </div>
         <div class="modal-body">
           <form action="" id="signUpForm">
-              <div class="form-group">
-                  <input type="text" name="" id="txSignUp">
-              </div>
+            <div class="form-group">
+              <input type="text" name="" id="txSignUp">
+            </div>
           </form>
         </div>
         <div class="modal-footer">
@@ -62,13 +64,13 @@
   </div>
 
 
-  <h1 class ="h1">Nombre</h1>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
-    <script src ="assets/references/bootstrap.min.js"></script>
-    <script src="assets/JS/registro.js"></script>
-    <script src="assets/JS/app.js"></script>
-    <scr
-</body>
+  <h1 id="h1UserName" class="h1">Nombre</h1>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+  <script src="assets/references/bootstrap.min.js"></script>
+  <script src="assets/JS/registro.js"></script>
+  <script src="assets/JS/app.js"></script>
+  <scr </body>
+
 </html>
