@@ -14,17 +14,3 @@ const loginUser = (email, password) => {
     return user;
 }
 
-const loginUserGoogle = ()=>{
-    let user = null;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-  .then((userCredential) => {
-    // Signed in
-     user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-  });
-  return user;
-}

@@ -40,7 +40,7 @@ const registerUserGoogle = async () => {
             let token = credential.accessToken;
             // The signed-in user info.
             user = result.user;
-           
+
 
             // ...
         }).catch((error) => {
