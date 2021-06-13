@@ -30,7 +30,7 @@ const registerUserGoogle = async () => {
 
     let provider = new firebase.auth.GoogleAuthProvider();
     let user = null;
-    firebase.auth()
+    await firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
             /** @type {firebase.auth.OAuthCredential} */
@@ -39,11 +39,9 @@ const registerUserGoogle = async () => {
             // This gives you a Google Access Token. You can use it to access the Google API.
             let token = credential.accessToken;
             // The signed-in user info.
-            user =  result.user;
-            console.log('Data obtained');
-            
-            console.log({user});
-            
+            user = result.user;
+           
+
             // ...
         }).catch((error) => {
             // Handle Errors here.
@@ -57,5 +55,7 @@ const registerUserGoogle = async () => {
             console.log(errorMessage);
 
         });
-    return  Promise.resolve(user);
+
+
+    return Promise.resolve(user);
 }
