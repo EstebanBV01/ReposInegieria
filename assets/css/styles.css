@@ -21,6 +21,10 @@
     color: white;
 }
 
+#recordarCheck {
+    justify-content: flex-start
+}
+
 #userPicture {
     height: 40px;
     width: 40px;

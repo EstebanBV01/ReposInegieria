@@ -26,12 +26,12 @@ const registerUser = (email, password) => {
 
 
 
-const registerUserGoogle = async() => {
-    console.log('Enter');
+const registerUserGoogle = async(persistencia) => {
+
     let db = firebase.firestore();
     let provider = new firebase.auth.GoogleAuthProvider();
     let user = null;
-    await firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION)
+    await firebase.auth().setPersistence(firebase.auth.Auth.Persistence[persistencia])
         .then(() => {
             // Existing and future Auth states are now persisted in the current
             // session only. Closing the window would clear any existing state even

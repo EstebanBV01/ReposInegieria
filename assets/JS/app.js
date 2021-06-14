@@ -70,7 +70,7 @@ const loggedIn = (user) => {
 
 
 bntGoogle.addEventListener('click', async() => {
-    await registerUserGoogle();
+    await registerUserGoogle("SESSION");
     console.log("DONE!");
     $('#signUpModal').modal('hide')
 })
