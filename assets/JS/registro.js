@@ -28,7 +28,7 @@ const registerUser = (email, password) => {
 
 const registerUserGoogle = async() => {
     console.log('Enter');
-
+    let db = firebase.firestore();
     let provider = new firebase.auth.GoogleAuthProvider();
     let user = null;
     await firebase.auth()
@@ -42,6 +42,23 @@ const registerUserGoogle = async() => {
             // The signed-in user info.
             user = result.user;
 
+            let docReg = db.collection("Users").doc(user.uid);
+
+            docReg.get().then((doc) => {
+                if (doc.exists) {
+                    
+                } else {
+                    db.collection("Users").doc(user.uid).set({
+                        email: user.email,
+                    }).then(() => {
+                        console.log("Document successfully written!");
+                    }).catch((error) => {
+                        console.error("Error writing document: ", error);
+                    })
+                }
+            }).catch((error) => {
+                console.log("Error getting document:", error);
+            });
 
             // ...
         }).catch((error) => {
