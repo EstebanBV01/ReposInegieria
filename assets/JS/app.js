@@ -20,10 +20,9 @@ btnRegistro.addEventListener("click", () => {
 bntGoogle.addEventListener('click', async() => {
     let user = await registerUserGoogle();
     h1UserName.innerHTML = user.displayName;
-    await validateWaterMeter("bWV33WRvcjE=");
+    await validateWaterMeter("JiYcTadGxMZYLLJ");
     console.log(user.uid);
 
     console.log("DONE!");
-    $('#exampleModalLabel').modal('hide');
 
 })
