@@ -6,6 +6,10 @@
     border-width: 0px;
 }
 
+.modal.hidden {
+    display: none;
+}
+
 #btnGoogle {
     border-color: #DB4437;
     background-color: white;
@@ -25,6 +29,10 @@
 #inputPassword,
 #inputEmail {
     margin-left: 10px;
+}
+
+#labelLoginimage {
+    float: right;
 }
 
 .btnOnClick {
