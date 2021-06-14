@@ -21,6 +21,12 @@
     color: white;
 }
 
+#userPicture {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
 #labelPassword,
 #labelEmail {
     margin-left: 10px;
