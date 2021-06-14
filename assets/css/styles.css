@@ -1,38 +1,37 @@
-#loginBtn,#registroBtn{
+#loginBtn,
+#registroBtn {
+    cursor: default !important;
     margin-bottom: 25px;
     background-color: white;
-    color: black;
     border-width: 0px;
-   
 }
 
-#btnGoogle{
+#btnGoogle {
     border-color: #DB4437;
-    background-color : white;
+    background-color: white;
     color: #DB4437;
-    background-image: url(/assets/images/google.svg);
-    padding: 10px 10px;
-	border-right: 1px solid rgba(255, 255, 255, 0.16);
-	box-shadow: rgba(0, 0, 0, 0.14) -1px 0px 0px inset;
 }
 
-#btnGoogle:hover{
-    background-color : #DB4437;
+#btnGoogle:hover {
+    background-color: #DB4437;
     color: white;
-
 }
 
-#labelPassword,#labelEmail{
+#labelPassword,
+#labelEmail {
     margin-left: 10px;
 }
 
-#inputPassword,#inputEmail{
+#inputPassword,
+#inputEmail {
     margin-left: 10px;
 }
 
-.btnOnClick{
+.btnOnClick {
     text-decoration: underline;
     text-decoration-thickness: 4px;
     text-underline-position: under;
     text-decoration-color: teal;
+    font-weight: bold;
+    color: teal;
 }

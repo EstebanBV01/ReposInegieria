@@ -1,4 +1,3 @@
-
 const registerUser = (email, password) => {
     let user = null;
     let db = firebase.firestore();
@@ -16,8 +15,8 @@ const registerUser = (email, password) => {
             })
         })
         .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
+            let errorCode = error.code;
+            let errorMessage = error.message;
 
 
             // ..
@@ -25,7 +24,9 @@ const registerUser = (email, password) => {
     return user;
 }
 
-const registerUserGoogle = async () => {
+
+
+const registerUserGoogle = async() => {
     console.log('Enter');
 
     let provider = new firebase.auth.GoogleAuthProvider();

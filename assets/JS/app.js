@@ -1,31 +1,29 @@
-
-
-let btnSignIn = document.querySelector("#btnSignIn");
+let bntGoogle = document.querySelector("#btnGoogle");
 let h1UserName = document.querySelector("#h1UserName");
 let btnLogin = document.querySelector("#loginBtn");
 let btnRegistro = document.querySelector("#registroBtn")
-
+let modal = document.querySelector("#exampleModalLabel");
 const btnClick = (btnOn, btnOff) => {
-  btnOn.classList.add("btnOnClick");
-  btnOff.classList.remove("btnOnClick");
+    btnOn.classList.add("btnOnClick");
+    btnOff.classList.remove("btnOnClick");
 
 }
 
 btnLogin.addEventListener("click", () => {
-  btnClick(btnLogin,btnRegistro);
+    btnClick(btnLogin, btnRegistro);
 })
 
 btnRegistro.addEventListener("click", () => {
-  btnClick(btnRegistro,btnLogin);
+    btnClick(btnRegistro, btnLogin);
 })
 
-btnSignIn.addEventListener('click', async () => {
-  let user = await registerUserGoogle();
-  console.log({ user });
-  h1UserName.innerHTML = user.displayName;
+bntGoogle.addEventListener('click', async() => {
+    let user = await registerUserGoogle();
+    h1UserName.innerHTML = user.displayName;
+    await validateWaterMeter("bWV33WRvcjE=");
+    console.log(user.uid);
+
+    console.log("DONE!");
+    $('#exampleModalLabel').modal('hide');
+
 })
-
-
-
-
-
